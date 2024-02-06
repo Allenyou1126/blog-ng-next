@@ -1,33 +1,26 @@
+@font-face {
+	font-family: "ChillRoundF";
+	src: url("~/public/ChillRoundF.otf");
+}
 @tailwind base;
+@layer base {
+	*::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background: #ccc;
+		border-radius: 5px;
+	}
+
+	*::-webkit-scrollbar-thumb:hover {
+		background: #b2b2b2;
+	}
+
+	*::-webkit-scrollbar-track {
+		border-radius: 10px;
+	}
+}
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
