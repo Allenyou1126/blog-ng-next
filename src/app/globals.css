@@ -22,5 +22,12 @@
 		border-radius: 10px;
 	}
 }
+.medium-zoom-overlay {
+	z-index: 998;
+	background-color: #000000 / 30;
+}
+.medium-zoom-image--opened {
+	z-index: 999;
+}
 @tailwind components;
 @tailwind utilities;

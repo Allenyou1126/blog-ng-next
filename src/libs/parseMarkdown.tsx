@@ -4,7 +4,9 @@ import { ReactNode } from "react";
 import slugify from "@sindresorhus/slugify";
 import mdit_anchor from "markdown-it-anchor";
 import mdit_mathjax from "markdown-it-mathjax";
-import { Parser } from "html-to-react";
+import htmr from "htmr";
+import AllenyouLink from "@/components/AllenyouLink";
+import LazyloadImage from "@/components/LazyloadImage";
 
 const mdit = MarkdownIt({
 	highlight: (str, lang) => {
@@ -24,8 +26,6 @@ const mdit = MarkdownIt({
 	})
 	.use(mdit_mathjax());
 
-const html_parser = Parser();
-
 function parseMarkdownToHtml(markdown: string): string {
 	return mdit.render(markdown);
 }
@@ -34,5 +34,11 @@ export default function parseMarkdown(
 	markdown: string
 ): ReactNode[] | ReactNode {
 	const html = parseMarkdownToHtml(markdown);
-	return html_parser.parse(html);
+	// console.log(html);
+	return htmr(html, {
+		transform: {
+			a: AllenyouLink,
+			img: LazyloadImage,
+		},
+	});
 }

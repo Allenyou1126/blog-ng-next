@@ -7,6 +7,7 @@ import { connectString } from "@/libs/connectString";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
+import mediumZoom from "medium-zoom";
 
 export default function RootLayout({
 	children,
@@ -34,6 +35,12 @@ export default function RootLayout({
 			media.removeEventListener("change", callback);
 		};
 	}, [theme]);
+	useEffect(() => {
+		mediumZoom(document.querySelectorAll(".zoomable"), {
+			// background: "#000000 / 30",
+			background: "rgb(0, 0, 0, 0.3)",
+		});
+	});
 	return (
 		<html
 			lang="zh-Hans"
