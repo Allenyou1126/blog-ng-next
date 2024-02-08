@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import hljs from "highlight.js";
+import HighlightJS from "highlight.js";
 import { ReactNode } from "react";
 import slugify from "@sindresorhus/slugify";
 import mdit_anchor from "markdown-it-anchor";
@@ -8,15 +8,17 @@ import htmr from "htmr";
 import AllenyouLink from "@/components/AllenyouLink";
 import LazyloadImage from "@/components/LazyloadImage";
 
-const mdit = MarkdownIt({
-	highlight: (str, lang) => {
-		try {
-			return hljs.highlight(str, {
-				language: lang,
-			}).value;
-		} catch (__) {}
-		return "";
-	},
+export const hljs = (str: string, lang: string): string => {
+	try {
+		return HighlightJS.highlight(str, {
+			language: lang,
+		}).value;
+	} catch (__) {}
+	return "";
+};
+
+export const mdit = MarkdownIt({
+	highlight: hljs,
 	html: true,
 })
 	.use(mdit_anchor, {

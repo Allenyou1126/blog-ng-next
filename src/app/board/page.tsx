@@ -1,3 +1,4 @@
+import { Comments } from "@/components/Comments";
 import { generateMetadata } from "@/libs/generateMetadata";
 import parseMarkdown from "@/libs/parseMarkdown";
 import { readFile } from "fs/promises";
@@ -20,6 +21,7 @@ export default async function LinkPage() {
 			<div className="prose prose-ay dark:prose-invert max-w-none">
 				{postContent}
 			</div>
+			<Comments />
 		</div>
 	);
 }

@@ -1,4 +1,5 @@
 "use client";
+import { connectString } from "@/libs/connectString";
 /* eslint-disable @next/next/no-img-element */
 import { useIntersection } from "foxact/use-intersection";
 import {
@@ -57,7 +58,7 @@ export const useImageFullyLoaded = (
 };
 
 export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
-	const { src, ...rest } = props;
+	const { src, className, ref, decoding, crossOrigin, ...rest } = props;
 	const imageElRef = useRef<HTMLImageElement>(null);
 
 	const previousSrcRef = useRef<string | undefined>(src);
@@ -94,7 +95,10 @@ export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 		// eslint-disable-next-line jsx-a11y/alt-text
 		<img
 			{...rest}
-			className="border-box p-0 border-0 m-auto block zoomable"
+			className={connectString([
+				"border-box p-0 border-0 m-auto block zoomable",
+				props.className == null ? "" : props.className,
+			])}
 			ref={imageElRef}
 			decoding="async"
 			crossOrigin="anonymous"

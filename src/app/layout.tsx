@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import mediumZoom from "medium-zoom";
+import { GoToTop } from "@/components/GoToTop";
 
 export default function RootLayout({
 	children,
@@ -37,7 +38,6 @@ export default function RootLayout({
 	}, [theme]);
 	useEffect(() => {
 		mediumZoom(document.querySelectorAll(".zoomable"), {
-			// background: "#000000 / 30",
 			background: "rgb(0, 0, 0, 0.3)",
 		});
 	});
@@ -52,6 +52,7 @@ export default function RootLayout({
 					{children}
 				</div>
 				<Footer />
+				<GoToTop />
 			</body>
 		</html>
 	);

@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "ChillRoundF";
-	src: url("~/public/ChillRoundF.otf");
+	src: url("https://blog-oss.allenyou.top/static/ChillRoundF.otf");
 }
 @tailwind base;
 @layer base {
@@ -16,6 +16,7 @@
 
 	*::-webkit-scrollbar-thumb:hover {
 		background: #b2b2b2;
+		/* opacity: 80%; */
 	}
 
 	*::-webkit-scrollbar-track {

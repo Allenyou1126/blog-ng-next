@@ -1,3 +1,4 @@
+import { Comments } from "@/components/Comments";
 import { config } from "@/libs/config";
 import { generateMetadata } from "@/libs/generateMetadata";
 import parseMarkdown from "@/libs/parseMarkdown";
@@ -53,6 +54,8 @@ export default async function PostPage({
 				<div className="prose prose-ay dark:prose-invert max-w-none">
 					{postContent}
 				</div>
+				<Comments />
+				{/* <WalineComments /> */}
 			</div>
 		</>
 	);
