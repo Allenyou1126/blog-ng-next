@@ -1,12 +1,13 @@
 import { generateMetadata } from "@/libs/generateMetadata";
 import PostList from "@/components/PostList";
 import { config } from "@/libs/config";
+import { initCMS } from "@/libs/contents";
 
 export var metadata = generateMetadata(`文章列表 - 第1页`);
 
 export async function generateStaticParams() {
-	const data = await fetch(`${config.build.api}post`).then((res) => res.json());
-	const total: number = data.total_page;
+	const cms = initCMS();
+	const total: number = Math.ceil(cms.postIds.length / 10);
 	var ret = [];
 	for (var i: number = 1; i <= total; ++i) {
 		ret.push({

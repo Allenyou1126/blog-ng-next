@@ -8,7 +8,7 @@ export const metadata = generateMetadata("关于");
 export default async function AboutPage() {
 	const getContent = async () => {
 		const res = await readFile(
-			path.join(process.cwd(), "src", "app", "markdowns", "about.md")
+			path.join(process.cwd(), "src", "data", "pages", "about.md")
 		);
 		return res.toString();
 	};

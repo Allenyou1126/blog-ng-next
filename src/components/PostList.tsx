@@ -1,22 +1,11 @@
 import { PostType } from "@/libs/types";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import PageSwitcher from "./PageSwitcher";
-import { config } from "@/libs/config";
+import { initCMS } from "@/libs/contents";
 
 export default async function PostList({ page }: { page: number }) {
-	const getData = async () => {
-		const res = await fetch(
-			`${config.build.api}post?page_size=10&page_num=${page}`
-		);
-
-		if (!res.ok) {
-			notFound();
-		}
-		return res.json();
-	};
-	const data = await getData();
-	const posts: PostType[] = await data.posts;
+	const cms = initCMS();
+	const posts: PostType[] = cms.getPosts(page);
 	const postList = posts.map((post, index) => {
 		return (
 			<div key={index} className="mb-8">
@@ -26,7 +15,7 @@ export default async function PostList({ page }: { page: number }) {
 					{post.title}
 				</Link>
 				<p className="opacity-60 my-4">
-					{new Date(post.created_at).toLocaleDateString()}
+					{post.created_at.toLocaleDateString()}
 				</p>
 				<p className="my-4">{post.description}</p>
 			</div>
@@ -35,7 +24,10 @@ export default async function PostList({ page }: { page: number }) {
 	return (
 		<>
 			{postList}
-			<PageSwitcher currentPage={page} totalPage={data.total_page} />
+			<PageSwitcher
+				currentPage={page}
+				totalPage={Math.floor(cms.postIds.length / 10)}
+			/>
 		</>
 	);
 }

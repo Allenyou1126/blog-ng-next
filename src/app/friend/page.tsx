@@ -4,31 +4,24 @@ import getAvatar from "@/libs/getAvatar";
 import parseMarkdown from "@/libs/parseMarkdown";
 import { readFile } from "fs/promises";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import path from "path";
 import { LinkType } from "@/libs/types";
-import { config } from "@/libs/config";
+import { initCMS } from "@/libs/contents";
 
 export const metadata = generateMetadata("友情链接");
 
 export default async function LinkPage() {
-	const getData = async () => {
-		const res = await fetch(`${config.build.api}link`);
-		if (!res.ok) {
-			notFound();
-		}
-		return res.json();
-	};
 	const getContent = async () => {
 		const res = await readFile(
-			path.join(process.cwd(), "src", "app", "markdowns", "friend.md")
+			path.join(process.cwd(), "src", "data", "pages", "friend.md")
 		);
 		return res.toString();
 	};
-	const data = await getData();
 	const content = await getContent();
 	const postContent = parseMarkdown(content);
-	const linkList = data.links.map((link: LinkType) => {
+	const cms = initCMS();
+	var index = 0;
+	const linkList = cms.links.map((link: LinkType) => {
 		if (link.image == undefined) {
 			link.image = getAvatar();
 		}
@@ -37,8 +30,8 @@ export default async function LinkPage() {
 		}
 		return (
 			<Link
+				key={++index}
 				href={link.url}
-				key={link.id}
 				className="flex flex-nowrap items-center gap-4 hover:opacity-90 col-span-1">
 				<img
 					alt={`avatar-${link.title}`}

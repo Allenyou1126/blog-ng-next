@@ -9,7 +9,7 @@ export const metadata = generateMetadata("留言板");
 export default async function LinkPage() {
 	const getContent = async () => {
 		const res = await readFile(
-			path.join(process.cwd(), "src", "app", "markdowns", "board.md")
+			path.join(process.cwd(), "src", "data", "pages", "board.md")
 		);
 		return res.toString();
 	};
