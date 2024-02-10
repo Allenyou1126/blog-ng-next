@@ -1,11 +1,10 @@
 #!/bin/bash
 
-rm -rf deploy/_next
-
-cp out/_next deploy/
-
-cd -r deploy
-
+cd deploy
+git pull
+rm -rf ./*
+cp -r ../out/* ./
+cp -r ../out/*.* ./
 git add .
 git commit -m "CI Auto Push"
 git push
