@@ -22,6 +22,7 @@ export const mdit = MarkdownIt({
 	highlight: hljs,
 	html: true,
 })
+	.enable("table")
 	.use(mdit_mathjax)
 	.use(mdit_anchor, {
 		slugify: (s: string) => {
@@ -37,6 +38,7 @@ export default function parseMarkdown(
 	markdown: string
 ): ReactNode[] | ReactNode {
 	const html = parseMarkdownToHtml(markdown);
+	// console.log(html);
 	return htmr(html, {
 		transform: {
 			a: AllenyouLink,

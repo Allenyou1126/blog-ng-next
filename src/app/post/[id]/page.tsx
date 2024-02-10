@@ -1,4 +1,5 @@
 import { Comments } from "@/components/Comments";
+import Toc from "@/components/Toc";
 import { initCMS } from "@/libs/contents";
 import { generateMetadata } from "@/libs/generateMetadata";
 import parseMarkdown from "@/libs/parseMarkdown";
@@ -28,7 +29,11 @@ export default async function PostPage({
 		notFound();
 	}
 	metadata = generateMetadata(post.title);
-	const postContent = parseMarkdown(post.content);
+	var postContent = parseMarkdown(post.content);
+	if (!Array.isArray(postContent)) {
+		postContent = [postContent];
+	}
+
 	return (
 		<>
 			<div className="rounded-3xl bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg backdrop-filter w-full max-w-4xl md:w-4xl p-6 min-h-48">
@@ -41,6 +46,7 @@ export default async function PostPage({
 				</div>
 				<Comments />
 			</div>
+			<Toc />
 		</>
 	);
 }

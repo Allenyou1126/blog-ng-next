@@ -7,6 +7,7 @@ import Link from "next/link";
 import path from "path";
 import { LinkType } from "@/libs/types";
 import { initCMS } from "@/libs/contents";
+import { Comments } from "@/components/Comments";
 
 export const metadata = generateMetadata("友情链接");
 
@@ -54,6 +55,7 @@ export default async function LinkPage() {
 				{postContent}
 			</div>
 			<div className="gap-4 grid grid-cols-1 md:grid-cols-2">{linkList}</div>
+			<Comments />
 		</div>
 	);
 }
