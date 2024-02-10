@@ -26,7 +26,7 @@ export default async function PostList({ page }: { page: number }) {
 			{postList}
 			<PageSwitcher
 				currentPage={page}
-				totalPage={Math.floor(cms.postIds.length / 10)}
+				totalPage={Math.ceil(cms.postIds.length / 10)}
 			/>
 		</>
 	);

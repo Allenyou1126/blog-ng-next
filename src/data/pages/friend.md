@@ -1,6 +1,6 @@
 这里是友链页面~
 
-如果你也想和 Allenyou 互换友链，那么请在下面留言~
+如果你也想和 秋实-Allenyou 互换友链，那么请在下面留言~
 
 一般情况下友链需要满足以下要求：
 
@@ -20,6 +20,6 @@
 <div class="rounded-lg bg-gray-200/20 text-slate-900 dark:text-gray-300/70 dark:bg-gray-500/50 p-2 py-2 backdrop-blur-md backdrop-filter my-2 text-lg overflow-x-auto">
 网站名称：秋实-Allenyou的小窝<br>
 博主名称（与上一条二选一）：秋实-Allenyou<br>
-头像（建议使用高速图床保存或者直接使用gravatar）：https://cravatar.cn/avatar/e3c460b2d621fbee1b22089bc71e7c91<br>
+头像（建议使用高速图床保存或者直接使用Gravatar镜像）：https://blog-oss.allenyou.top/avatar/59b2fbdd507a84fe181b0af3e4ad7be3<br>
 个人签名or简介（可选）：稻花香里说丰年，听取WA声一片
 </div>

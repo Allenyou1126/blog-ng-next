@@ -22,6 +22,14 @@
 	*::-webkit-scrollbar-track {
 		border-radius: 10px;
 	}
+	.not-prose {
+	}
+}
+mjx-container {
+	@apply inline-block;
+	@apply text-base;
+	@apply align-baseline;
+	@apply !mb-0;
 }
 .medium-zoom-overlay {
 	z-index: 998;
@@ -30,5 +38,6 @@
 .medium-zoom-image--opened {
 	z-index: 999;
 }
+/* .mjx */
 @tailwind components;
 @tailwind utilities;

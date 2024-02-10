@@ -38,7 +38,7 @@ export default function AllenyouLink(props: JSX.IntrinsicElements["a"]) {
 	}
 
 	return (
-		<Link href={href} passHref>
+		<Link legacyBehavior href={href} passHref>
 			<a {...rest} />
 		</Link>
 	);
