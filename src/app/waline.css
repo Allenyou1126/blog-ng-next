@@ -14,7 +14,7 @@
 	--waline-disable-color: #000;
 	--waline-code-bgcolor: #282c34;
 	--waline-bq-color: #f0f0f0;
-	--waline-avatar-size: 3.25rem;
+	--waline-avatar-size: 4rem;
 	--waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
 	--waline-badge-color: #89c3eb;
 	--waline-badge-font-size: 0.75em;
@@ -642,10 +642,11 @@
 .wl-card .wl-meta > span {
 	display: inline-block;
 	margin-inline-end: 0.25em;
-	padding: 2px 4px;
+	padding: 4px 8px;
 	border-radius: 0.2em;
 	background: var(--waline-info-bgcolor);
 	color: var(--waline-info-color);
+	border-radius: 1rem;
 	font-size: var(--waline-info-font-size);
 	line-height: 1.5;
 }

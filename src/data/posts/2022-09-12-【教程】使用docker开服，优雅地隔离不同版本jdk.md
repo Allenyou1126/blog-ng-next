@@ -276,7 +276,3 @@ Docker 的功能非常强大，本文无法一一讲解，只能以实用主义�
 - 紫光（Bilibili: @紫光-zlight106 UID：1690218019）：对本文的初版进行了试阅读并提供了反馈
 
 - 幻歆（[https://huanxinbot.com/](https://huanxinbot.com/)）：修正了一些错误
-
-```
-
-```
