@@ -12,3 +12,10 @@ export type LinkType = {
 	description?: string;
 	image?: string;
 };
+export type TocType = {
+	display: string;
+	id: string;
+	level: number;
+	child: TocType[];
+	parent?: TocType;
+};

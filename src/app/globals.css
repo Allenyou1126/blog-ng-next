@@ -1,7 +1,3 @@
-@font-face {
-	font-family: "ChillRoundF";
-	src: url("https://blog-oss.allenyou.top/static/ChillRoundF.otf");
-}
 @tailwind base;
 @layer base {
 	*::-webkit-scrollbar {
@@ -22,9 +18,9 @@
 	*::-webkit-scrollbar-track {
 		border-radius: 10px;
 	}
-	.not-prose {
-	}
 }
+@tailwind components;
+@tailwind utilities;
 mjx-container {
 	@apply inline-block;
 	@apply text-base;
@@ -38,6 +34,3 @@ mjx-container {
 .medium-zoom-image--opened {
 	z-index: 999;
 }
-/* .mjx */
-@tailwind components;
-@tailwind utilities;

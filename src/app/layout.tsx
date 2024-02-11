@@ -1,5 +1,6 @@
 "use client";
 import "./globals.css";
+import "./chillroundf.css";
 import { useAtomValue } from "jotai/react";
 import { darkMode } from "@/libs/darkMode";
 import { useEffect, useState } from "react";
@@ -9,6 +10,7 @@ import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import mediumZoom from "medium-zoom";
 import { GoToTop } from "@/components/GoToTop";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function RootLayout({
 	children,
@@ -36,15 +38,14 @@ export default function RootLayout({
 			media.removeEventListener("change", callback);
 		};
 	}, [theme]);
-	useEffect(() => {
-		mediumZoom(document.querySelectorAll(".zoomable"), {
-			background: "rgb(0, 0, 0, 0.3)",
-		});
-	});
 	return (
 		<html
 			lang="zh-Hans"
-			className={connectString([dark ? "dark" : "", "font-crf"])}>
+			className={connectString([
+				dark ? "dark" : "",
+				"font-crf",
+				"scroll-smooth",
+			])}>
 			<body className="dark:bg-gray-950 dark:text-gray-300/80">
 				<Navigation />
 				<Header />
@@ -53,6 +54,7 @@ export default function RootLayout({
 				</div>
 				<Footer />
 				<GoToTop />
+				<MobileMenu />
 			</body>
 		</html>
 	);

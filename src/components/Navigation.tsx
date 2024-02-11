@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import DarkModeSwitcher from "./DarkModeSwitcher";
 import getAvatar from "@/libs/getAvatar";
+import MobileNavSwitcher from "./MobileMenuSwitcher";
 
 export default function Navigation() {
 	const [shouldExpand, setShouldExpand] = useState(false);
@@ -52,6 +53,8 @@ export default function Navigation() {
 				<Link href="/">
 					<img
 						src={`${getAvatar("allenyou1126@gmail.com")}?s=48`}
+						width={48}
+						height={48}
 						alt="Avatar"
 						className="rounded-full"
 					/>
@@ -70,6 +73,7 @@ export default function Navigation() {
 						<Link href="/about/">关于</Link>
 					</li>
 				</ul>
+				<MobileNavSwitcher />
 				<DarkModeSwitcher />
 			</div>
 		</nav>

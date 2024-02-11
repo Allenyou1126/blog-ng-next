@@ -1,4 +1,4 @@
-import MarkdownIt from "markdown-it";
+import MarkdownIt, { Token } from "markdown-it";
 import HighlightJS from "highlight.js";
 import { ReactNode } from "react";
 import slugify from "@sindresorhus/slugify";
@@ -7,6 +7,7 @@ import mdit_mathjax from "markdown-it-mathjax3";
 import htmr from "htmr";
 import AllenyouLink from "@/components/AllenyouLink";
 import LazyloadImage from "@/components/LazyloadImage";
+import { TocType } from "./types";
 
 export const hljs = (str: string, lang: string): string => {
 	const l = HighlightJS.getLanguage(lang);
@@ -18,6 +19,10 @@ export const hljs = (str: string, lang: string): string => {
 	return "";
 };
 
+const slg = (s: string) => {
+	return `content-${slugify(s)}`;
+};
+
 export const mdit = MarkdownIt({
 	highlight: hljs,
 	html: true,
@@ -25,13 +30,71 @@ export const mdit = MarkdownIt({
 	.enable("table")
 	.use(mdit_mathjax)
 	.use(mdit_anchor, {
-		slugify: (s: string) => {
-			return `content-${slugify(s)}`;
-		},
+		slugify: slg,
 	});
 
 function parseMarkdownToHtml(markdown: string): string {
 	return mdit.render(markdown);
+}
+
+export function parseToc(markdown: string): TocType[] {
+	const ast = mdit.parse(markdown, {});
+	var flag = false;
+	var title = "";
+	var toc_array: { level: number; title: string; id: string }[] = [];
+	ast.forEach((value: Token) => {
+		if (value.type == "heading_open") {
+			flag = true;
+			return;
+		}
+		if (flag && value.type == "inline") {
+			title = value.content;
+			return;
+		}
+		if (flag && value.type == "heading_close") {
+			flag = false;
+			toc_array.push({
+				level: Number(value.tag.charAt(1)),
+				title: title,
+				id: slg(title),
+			});
+			title = "";
+			return;
+		}
+	});
+	var ret: TocType[] = [];
+	toc_array.forEach((tok) => {
+		if (ret.length === 0) {
+			ret.push({
+				id: tok.id,
+				display: tok.title,
+				level: tok.level,
+				child: [],
+			});
+			return;
+		}
+		var cur: TocType | undefined = ret[ret.length - 1];
+		while (cur !== undefined && cur.level >= tok.level) {
+			cur = cur.parent;
+		}
+		if (cur === undefined) {
+			ret.push({
+				id: tok.id,
+				display: tok.title,
+				level: tok.level,
+				child: [],
+			});
+		} else {
+			cur.child.push({
+				id: tok.id,
+				display: tok.title,
+				level: tok.level,
+				child: [],
+				parent: cur,
+			});
+		}
+	});
+	return ret;
 }
 
 export default function parseMarkdown(

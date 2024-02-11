@@ -2,6 +2,7 @@
 import { connectString } from "@/libs/connectString";
 /* eslint-disable @next/next/no-img-element */
 import { useIntersection } from "foxact/use-intersection";
+import mediumZoom, { Zoom } from "medium-zoom";
 import {
 	useRef,
 	useMemo,
@@ -9,6 +10,7 @@ import {
 	useCallback,
 	useEffect,
 	useState,
+	RefCallback,
 } from "react";
 
 const LOADED_IMAGE_URLS = new Set<string>();
@@ -59,7 +61,7 @@ export const useImageFullyLoaded = (
 
 export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 	const { src, className, ref, decoding, crossOrigin, ...rest } = props;
-	const imageElRef = useRef<HTMLImageElement>(null);
+	const imageElRef = useRef<HTMLImageElement | null>(null);
 
 	const previousSrcRef = useRef<string | undefined>(src);
 	const isLazy = useMemo(() => {
@@ -73,7 +75,6 @@ export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 	}, [src]);
 
 	const isImageFullyLoaded = useImageFullyLoaded(imageElRef, src);
-
 	const [setIntersection, isIntersected, resetIntersected] =
 		useIntersection<HTMLImageElement>({
 			rootMargin: "200px",
@@ -87,7 +88,26 @@ export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 		}
 		setIntersection(imageElRef.current);
 	}, [resetIntersected, setIntersection, src]);
+	const zoomRef = useRef<Zoom | null>(null);
+	function getZoom() {
+		if (zoomRef.current === null) {
+			zoomRef.current = mediumZoom({
+				background: "rgb(0, 0, 0, 0.3)",
+			});
+		}
+		return zoomRef.current;
+	}
 
+	const attachZoom: RefCallback<HTMLImageElement> = (node) => {};
+	const myref: RefCallback<HTMLImageElement> = (node) => {
+		imageElRef.current = node;
+		const zoom = getZoom();
+		if (node) {
+			zoom.attach(node);
+		} else {
+			zoom.detach();
+		}
+	};
 	const isVisible = !isLazy || isIntersected;
 	// 由 React 控制显示 1px 占位图还是真实图片
 	const srcString = isVisible ? src : SMALLEST_GIF;
@@ -99,7 +119,7 @@ export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 				"border-box p-0 border-0 m-auto block zoomable",
 				props.className == null ? "" : props.className,
 			])}
-			ref={imageElRef}
+			ref={myref}
 			decoding="async"
 			crossOrigin="anonymous"
 			src={srcString}

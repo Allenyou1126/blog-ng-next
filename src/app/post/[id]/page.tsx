@@ -2,7 +2,7 @@ import { Comments } from "@/components/Comments";
 import Toc from "@/components/Toc";
 import { initCMS } from "@/libs/contents";
 import { generateMetadata } from "@/libs/generateMetadata";
-import parseMarkdown from "@/libs/parseMarkdown";
+import parseMarkdown, { parseToc } from "@/libs/parseMarkdown";
 import { notFound } from "next/navigation";
 
 export var metadata = generateMetadata(`文章`);
@@ -30,13 +30,10 @@ export default async function PostPage({
 	}
 	metadata = generateMetadata(post.title);
 	var postContent = parseMarkdown(post.content);
-	if (!Array.isArray(postContent)) {
-		postContent = [postContent];
-	}
-
+	var toc = parseToc(post.content);
 	return (
 		<>
-			<div className="rounded-3xl bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg backdrop-filter w-full max-w-4xl md:w-4xl p-6 min-h-48">
+			<div className="rounded-3xl bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg backdrop-filter w-full max-w-4xl mx-auto md:w-4xl p-6 min-h-48">
 				<p className="text-3xl font-bold my-2">{post.title}</p>
 				<p className="opacity-60 mt-2 mb-8">
 					{post.created_at.toLocaleDateString()}
@@ -46,7 +43,7 @@ export default async function PostPage({
 				</div>
 				<Comments />
 			</div>
-			<Toc />
+			<Toc toc={toc} />
 		</>
 	);
 }
