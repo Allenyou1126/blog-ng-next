@@ -36,7 +36,7 @@ export default function Toc({ toc }: { toc: TocType[] }) {
 	return (
 		<div className="hidden 2xl:block absolute left-4 h-full">
 			<div className="h-40"></div>
-			<div className="sticky top-40 w-80 overflow-y-scroll text-wrap">
+			<div className="sticky top-28 w-80 overflow-y-auto text-wrap h-[85vh]">
 				{tocContent}
 			</div>
 		</div>

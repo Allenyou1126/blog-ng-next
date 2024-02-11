@@ -63,6 +63,7 @@ export function parseToc(markdown: string): TocType[] {
 		}
 	});
 	var ret: TocType[] = [];
+	var cur: TocType | undefined = undefined;
 	toc_array.forEach((tok) => {
 		if (ret.length === 0) {
 			ret.push({
@@ -71,9 +72,9 @@ export function parseToc(markdown: string): TocType[] {
 				level: tok.level,
 				child: [],
 			});
+			cur = ret[0];
 			return;
 		}
-		var cur: TocType | undefined = ret[ret.length - 1];
 		while (cur !== undefined && cur.level >= tok.level) {
 			cur = cur.parent;
 		}
@@ -84,6 +85,7 @@ export function parseToc(markdown: string): TocType[] {
 				level: tok.level,
 				child: [],
 			});
+			cur = ret[ret.length - 1];
 		} else {
 			cur.child.push({
 				id: tok.id,
@@ -92,6 +94,7 @@ export function parseToc(markdown: string): TocType[] {
 				child: [],
 				parent: cur,
 			});
+			cur = cur.child[cur.child.length - 1];
 		}
 	});
 	return ret;
