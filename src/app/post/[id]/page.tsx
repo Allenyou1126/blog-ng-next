@@ -1,4 +1,5 @@
 import { Comments } from "@/components/Comments";
+import Copyright from "@/components/Copyright";
 import OutdateTip from "@/components/OutdateTip";
 import Toc from "@/components/Toc";
 import { initCMS } from "@/libs/contents";
@@ -30,8 +31,8 @@ export default async function PostPage({
 		notFound();
 	}
 	metadata = generateMetadata(post.title);
-	var postContent = parseMarkdown(post.content);
-	var toc = parseToc(post.content);
+	const postContent = parseMarkdown(post.content);
+	const toc = parseToc(post.content);
 	return (
 		<>
 			<div className="rounded-3xl bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg backdrop-filter w-full max-w-4xl mx-auto md:w-4xl p-6 min-h-48">
@@ -40,9 +41,10 @@ export default async function PostPage({
 					{post.created_at.toLocaleDateString()}
 				</p>
 				<OutdateTip created={post.modified_at.toDateString()} />
-				<div className="prose prose-ay dark:prose-invert max-w-none my-8">
+				<div className="prose prose-ay dark:prose-invert max-w-3xl break-all my-8">
 					{postContent}
 				</div>
+				<Copyright title={post.title} id={params.id} />
 				<Comments />
 			</div>
 			<Toc toc={toc} />

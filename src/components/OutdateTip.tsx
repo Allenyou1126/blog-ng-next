@@ -13,6 +13,7 @@ export default function OutdateTip({ created }: { created: string }) {
 	const vis = val >= 365;
 	return (
 		<p
+			suppressHydrationWarning
 			className={connectString([
 				vis ? "block" : "hidden",
 				" align-baseline bg-primary/80 dark:bg-primary/50 rounded-2xl backdrop-blur-xl backdrop-filter p-4",

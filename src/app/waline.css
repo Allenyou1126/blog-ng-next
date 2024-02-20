@@ -650,6 +650,10 @@
 	font-size: var(--waline-info-font-size);
 	line-height: 1.5;
 }
+.wl-like,
+.wl-sort {
+	display: none !important;
+}
 .wl-card .wl-meta > span:empty {
 	display: none;
 }

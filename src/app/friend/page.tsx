@@ -51,7 +51,7 @@ export default async function LinkPage() {
 	return (
 		<div className="rounded-3xl bg-white/70 dark:bg-gray-950/70 backdrop-blur-lg backdrop-filter w-full max-w-4xl md:w-4xl p-6 min-h-48">
 			<p className="text-3xl font-bold mt-2 mb-8">友情链接</p>
-			<div className="prose prose-ay dark:prose-invert max-w-none">
+			<div className="prose prose-ay dark:prose-invert max-w-3xl break-all">
 				{postContent}
 			</div>
 			<div className="gap-4 grid grid-cols-1 md:grid-cols-2">{linkList}</div>

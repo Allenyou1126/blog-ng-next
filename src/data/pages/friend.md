@@ -17,9 +17,7 @@
 
 最后，本博客的个人信息就放在这里，欢迎自取（留言也可参考格式）
 
-<div class="rounded-lg bg-gray-200/20 text-slate-900 dark:text-gray-300/70 dark:bg-gray-500/50 p-2 py-2 backdrop-blur-md backdrop-filter my-2 text-lg overflow-x-auto max-w-none">
-网站名称：秋实-Allenyou的小窝<br>
-博主名称（与上一条二选一）：秋实-Allenyou<br>
-头像（建议使用高速图床保存或者直接使用Gravatar镜像）：https://blog-oss.allenyou.top/avatar/59b2fbdd507a84fe181b0af3e4ad7be3<br>
-个人签名or简介（可选）：稻花香里说丰年，听取WA声一片
-</div>
+- 网站名称：秋实-Allenyou 的小窝
+- 博主名称（与上一条二选一）：秋实-Allenyou
+- 头像（建议使用高速图床保存或者直接使用 Gravatar 镜像）：https://blog-oss.allenyou.top/avatar/59b2fbdd507a84fe181b0af3e4ad7be3
+- 个人签名 or 简介（可选）：稻花香里说丰年，听取 WA 声一片
