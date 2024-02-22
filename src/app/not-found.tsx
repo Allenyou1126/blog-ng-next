@@ -1,11 +1,5 @@
 "use client";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Navigation from "@/components/Navigation";
-import { connectString } from "@/libs/connectString";
-import { darkMode } from "@/libs/darkMode";
 import { generateMetadata } from "@/libs/generateMetadata";
-import { useAtomValue } from "jotai";
 import Link from "next/link";
 
 export const metadata = generateMetadata("404");

@@ -5,7 +5,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
-export const GoToTop = function GoToTopInside() {
+export default function GoToTop() {
 	const [vis, setVis] = useState(false);
 	const handler = throttle(() => {
 		const scrollTop =
@@ -42,4 +42,4 @@ export const GoToTop = function GoToTopInside() {
 			<FontAwesomeIcon icon={faChevronUp} className="text-3xl" />
 		</button>
 	);
-};
+}

@@ -8,8 +8,7 @@ import { connectString } from "@/libs/connectString";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
-import mediumZoom from "medium-zoom";
-import { GoToTop } from "@/components/GoToTop";
+import GoToTop from "@/components/GoToTop";
 import MobileMenu from "@/components/MobileMenu";
 
 export default function RootLayout({
