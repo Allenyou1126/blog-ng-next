@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css";
+import "./tailwind.css";
 import "./chillroundf.css";
 import { useAtomValue } from "jotai/react";
 import { darkMode } from "@/libs/darkMode";

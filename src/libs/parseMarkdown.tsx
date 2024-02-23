@@ -9,6 +9,10 @@ import AllenyouLink from "@/components/AllenyouLink";
 import LazyloadImage from "@/components/LazyloadImage";
 import { TocType } from "./types";
 
+HighlightJS.configure({
+	classPrefix: "hljs-",
+});
+
 export const hljs = (str: string, lang: string): string => {
 	const l = HighlightJS.getLanguage(lang);
 	try {
