@@ -59,4 +59,11 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
 		description: "一个无聊的人罢了~",
 	},
+	{
+		title: "吐槽大王部落格",
+		url: "https://www.tcdw.net/",
+		image:
+			"https://blog-oss.allenyou.top/avatar/70ae2023afad30dae905344325cece8f",
+		description: "正在学习接受不完美的世界！",
+	},
 ];
