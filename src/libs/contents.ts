@@ -31,7 +31,10 @@ class CMS {
 					getOrDefault(attr.created_at, "1919-08-10T11:45:14Z")
 				),
 				modified_at: new Date(
-					getOrDefault(attr.modified_at, "1919-08-10T11:45:14Z")
+					getOrDefault(
+						attr.modified_at,
+						getOrDefault(attr.created_at, "1919-08-10T11:45:14Z")
+					)
 				),
 			});
 		});
