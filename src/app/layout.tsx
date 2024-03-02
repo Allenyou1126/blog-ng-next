@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import GoToTop from "@/components/GoToTop";
 import MobileMenu from "@/components/MobileMenu";
+import { Matomo } from "@/components/Matomo";
 
 export default function RootLayout({
 	children,
@@ -54,6 +55,7 @@ export default function RootLayout({
 				<Footer />
 				<GoToTop />
 				<MobileMenu />
+				<Matomo />
 			</body>
 		</html>
 	);
