@@ -1,5 +1,5 @@
 ---
-id: 6
+id: 7
 title: "【教程】使用Docker开服，优雅地隔离不同版本JDK"
 description: 对于各位腐竹来说，JDK 作为 Minecraft 开服的前置想必都不陌生。但 Minecraft 1.17 开始对高版本 JDK 的需求也为一些需要多版本切换的腐竹产生了一些困扰。本文将简述一种基于 AdoptJDK on Docker 进行开服并借以实现 JDK 环境隔离的方法。
 created_at: "2022-09-12"
