@@ -66,4 +66,10 @@ export const links: LinkType[] = [
 			"https://blog-oss.allenyou.top/avatar/70ae2023afad30dae905344325cece8f",
 		description: "正在学习接受不完美的世界！",
 	},
+	{
+		title: "孤熵小狼",
+		url: "https://blog.nixieka.top",
+		image: "https://blog-oss.allenyou.top/image/65ed6956adbf1.webp",
+		description: "趁年轻，多闯荡",
+	},
 ];
