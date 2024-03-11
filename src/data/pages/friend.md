@@ -21,3 +21,5 @@
 - 博主名称（与上一条二选一）：秋实-Allenyou
 - 头像（建议使用高速图床保存或者直接使用 Gravatar 镜像）：https://blog-oss.allenyou.top/avatar/59b2fbdd507a84fe181b0af3e4ad7be3
 - 个人签名 or 简介（可选）：稻花香里说丰年，听取 WA 声一片
+
+**由于本博客开源于 [Allenyou1126/blog-ng-next](https://github.com/Allenyou1126/blog-ng-next)，您也可以通过自行到仓库中修改 `src/data/links.ts` 并提交 Pull Request 的方式申请友链~**

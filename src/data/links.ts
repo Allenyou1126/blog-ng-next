@@ -72,4 +72,11 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/65ed6956adbf1.webp",
 		description: "趁年轻，多闯荡",
 	},
+	{
+		title: "阿方的博客",
+		url: "https://fang.blog.miri.site/",
+		image:
+			"https://blog-oss.allenyou.top/avatar/450ae8d0f847ca902ea88ee8ea42ea34",
+		description: "现实的引力太过沉重，任何飞扬的思想都会砰然坠地。",
+	},
 ];
