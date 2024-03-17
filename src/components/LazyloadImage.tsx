@@ -97,8 +97,6 @@ export default function LazyloadImage(props: JSX.IntrinsicElements["img"]) {
 		}
 		return zoomRef.current;
 	}
-
-	const attachZoom: RefCallback<HTMLImageElement> = (node) => {};
 	const myref: RefCallback<HTMLImageElement> = (node) => {
 		imageElRef.current = node;
 		const zoom = getZoom();

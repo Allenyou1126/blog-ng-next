@@ -17,19 +17,19 @@
 我平时花在游戏上的时间还是很少的（太菜了总是打不来），在玩 / 玩过的游戏有下面这些：
 
 - Minecraft: Java Edition（有正版）
-- Phigros（rks 15.26）
+- Phigros（rks 15.33）
 - Arcaea（ptt 9.06）
 - Malody（过 Regular 0dan）
 - 旋转音律 Rotaeno（Rating 15.023）
 - xuTry（公测中的 Furry 向音游欸，虽然不会打浮现式）
-- Changed（打不过……）
-- Neglected（已通关）
-- Illusion（已通关）
-- CS2（菜，5e 优先 900+（捂脸））
-- Apex Legends（吃我一发哨兵——）
-- Titanfall 2（从小帮手入门到近战精通）
-- PUBG（跟同学开黑玩，打的很菜）
-- Noita（玩的很少）
+- Changed
+- Neglected
+- Illusion
+- CS2
+- Apex Legends
+- Titanfall 2
+- PUBG
+- Noita
 
 突然发现我玩的游戏还蛮多的而且我真的好菜啊 QwQ
 
@@ -38,7 +38,9 @@
 我的联系方式大多不对外公开，对外公开的仅限以下内容（其他的如果我给我会主动给出，但也请不要随意泄露）
 
 - Bilibili：@秋实-Allenyou
-- 邮箱：allenyou1126@gmail.com
+- 邮箱：
+  - allenyou1126@gmail.com
+  - i@allenyou.wang （推荐！）
 
 ## 关于本站
 
@@ -58,7 +60,7 @@
 
 本站部署在狗云的香港 - KC 机房 VPS 上，配置为 2C2G50M 带宽，线路是三网优化。
 
-域名是在腾讯云买的\`.wang\`域名，价格是一年 40，暂时还没备案。
+域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时还没备案。
 
 DNS 使用 Cloudflare 的免费服务进行解析，没开启 CDN（CF 的国外节点在国内用简直就是减速好吗 kora！）
 
