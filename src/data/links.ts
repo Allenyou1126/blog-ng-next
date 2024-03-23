@@ -22,8 +22,8 @@ export const links: LinkType[] = [
 		description: "好的，这里是冰轩",
 	},
 	{
-		title: "咬一口激动的鱼",
-		url: "https://jiyu134.top/",
+		title: "狼林鱼池",
+		url: "https://blog.jiyu134.top/",
 		image: "https://blog-oss.allenyou.top/image/65c6353e8b4f9.jpg",
 		description: "风带来了故事的种子，时间使之发芽",
 	},

@@ -25,7 +25,7 @@ const config: Config = {
 				"4xl": "56rem",
 			},
 			colors: {
-				primary: "#89c3eb",
+				primary: "#6db0ec",
 			},
 			fontFamily: {
 				crf: ["ChillRoundF"],
