@@ -8,6 +8,7 @@ import htmr from "htmr";
 import AllenyouLink from "@/components/AllenyouLink";
 import LazyloadImage from "@/components/LazyloadImage";
 import { TocType } from "./types";
+import AllenyouDiv from "@/components/AllenyouDiv";
 
 HighlightJS.configure({
 	classPrefix: "hljs-",
@@ -108,11 +109,11 @@ export default function parseMarkdown(
 	markdown: string
 ): ReactNode[] | ReactNode {
 	const html = parseMarkdownToHtml(markdown);
-	// console.log(html);
 	return htmr(html, {
 		transform: {
 			a: AllenyouLink,
 			img: LazyloadImage,
+			div: AllenyouDiv,
 		},
 	});
 }
