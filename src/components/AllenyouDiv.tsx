@@ -1,12 +1,14 @@
 import AllenyouLink from "./AllenyouLink";
+import LazyloadImage from "./LazyloadImage";
 
 const customComponents: {
 	[prop: string]: // | JSX.Element
 	// | React.ComponentType<ComponentProps<any>>
 	React.ElementType;
 } = {
-	FallbackComponent: FallbackComponent,
-	AllenyouLink: AllenyouLink,
+	Default: FallbackComponent,
+	Link: AllenyouLink,
+	Image: LazyloadImage,
 };
 
 export function FallbackComponent(
@@ -21,20 +23,20 @@ export function FallbackComponent(
 }
 
 export default function AllenyouDiv(
-	props: JSX.IntrinsicElements["div"] & { componenttype?: string },
+	props: JSX.IntrinsicElements["div"] & { component?: string },
 	{
 		children,
 	}: Readonly<{
 		children?: React.ReactNode;
 	}> = {}
 ) {
-	if (props === undefined || !props.hasOwnProperty("componenttype")) {
+	if (props === undefined || !props.hasOwnProperty("component")) {
 		return <div>{children}</div>;
 	}
-	if (!customComponents.hasOwnProperty(props.componenttype!)) {
+	if (!customComponents.hasOwnProperty(props.component!)) {
 		return <FallbackComponent {...props}>{children}</FallbackComponent>;
 	}
-	const Target = customComponents[props.componenttype!];
+	const Target = customComponents[props.component!];
 	if (children === undefined || children === null) {
 		return <Target {...props} />;
 	} else {
