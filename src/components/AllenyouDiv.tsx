@@ -1,5 +1,6 @@
 import AllenyouLink from "./AllenyouLink";
 import LazyloadImage from "./LazyloadImage";
+import BilibiliVideo from "./MarkdownExtend/BilibiliVideo";
 
 const customComponents: {
 	[prop: string]: // | JSX.Element
@@ -9,6 +10,7 @@ const customComponents: {
 	Default: FallbackComponent,
 	Link: AllenyouLink,
 	Image: LazyloadImage,
+	Bilibili: BilibiliVideo,
 };
 
 export function FallbackComponent(
