@@ -41,7 +41,7 @@ export default async function PostPage({
 					{post.created_at.toLocaleDateString()}
 				</p>
 				<OutdateTip created={post.modified_at.toDateString()} />
-				<div className="prose prose-ay dark:prose-invert max-w-3xl break-all my-8">
+				<div className="prose prose-ay dark:prose-invert max-w-4xl break-all my-8">
 					{postContent}
 				</div>
 				<Copyright title={post.title} id={params.id} />
