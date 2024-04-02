@@ -1,46 +1,46 @@
-你好，这里是秋实-Allenyou，你也可以叫我秋实、Allenyou（念作 Allen 尤）、Allen。如果你已经认识我了，那么可以直接跳过以下整篇简介了，否则希望下面的简介能够让你快速认识我。
-
-## 学业
-
-目前就读于国内某大学电子信息类专业。
+你好，这里是秋实-Allenyou （a.k.a. Allenyou、秋实、Allen You），业余 Bug Producer，Furry 控，前 OIer，现 ACMer（蒟蒻），这是一些关于我和本站的信息。
 
 ## 技术
 
-目前我掌握的东西很杂，好像什么都会一点但没有任何一项可以称得上是真正“登堂入室”，包括但不限于：
-
-- 编程：常用 C++和 Java / Kotlin（虽然很菜），会一点 Python，会一点前端技能，其他的属于看得懂但不太会写需要面向文档编程
-- 运维：会一点 Linux 基础操作，会写简单的 Nginx 配置文件，会一点基础 Docker 操作，但不会任何高端操作而且经常犯蠢
-- 软件：PS 简单操作，PR 基础剪辑，但同上，不会任何花里胡哨的高端操作
+- C++：主要用于算法竞赛，会基本语法、STL、简单面向对象和一些指针/模板/宏的黑魔法
+- Java/Kotlin：主要用于开发 Minecraft Bukkit 服务器插件
+- Python：俗称胶水，用来偷懒/做一些科学计算
+- JavaScript/TypeScript：前端开发
+  - React + Next.js：本博客技术栈
+  - Vue：尝试过，但是最近没在用
+- Tailwind CSS：用来解决我不会写 CSS 的问题（bushi）
+- Linux + Docker：非常适合偷懒的服务器运维方法（）
 
 ## VAN♂ 游戏
 
-我平时花在游戏上的时间还是很少的（太菜了总是打不来），在玩 / 玩过的游戏有下面这些：
+我平时花在游戏上的时间不算特别多，在玩的游戏有下面这些（按照最近玩的时间长短排序）：
 
-- Minecraft: Java Edition（有正版）
-- Phigros（rks 15.33）
-- Arcaea（ptt 9.06）
-- Malody（过 Regular 0dan）
-- 旋转音律 Rotaeno（Rating 15.023）
-- xuTry（公测中的 Furry 向音游欸，虽然不会打浮现式）
-- Changed
-- Neglected
-- Illusion
-- CS2
 - Apex Legends
+- Phigros（rks 15.33）
+- Arcaea（ptt 9.53）
+- Counter Strike 2
+- 范式：起源 Paradigm: Reboot
+- Minecraft: Java Edition
+- Malody（Regular 0dan）
+- 旋转音律 Rotaeno（Rating 15.023）
+- Changed
 - Titanfall 2
-- PUBG
-- Noita
+- PUBG: Battlegrounds
 
 突然发现我玩的游戏还蛮多的而且我真的好菜啊 QwQ
 
-## Contact Me
+## Furry？
 
-我的联系方式大多不对外公开，对外公开的仅限以下内容（其他的如果我给我会主动给出，但也请不要随意泄露）
+单纯小透明福瑞控一枚
+
+## 联系方式
+
+你可以通过以下方法联系我（其他的请联系我私下获取，但最好不要公开）：
 
 - Bilibili：@秋实-Allenyou
 - 邮箱：
-  - allenyou1126@gmail.com
   - i@allenyou.wang （推荐！）
+  - allenyou1126@gmail.com
 
 ## 关于本站
 
@@ -58,7 +58,7 @@
 
 ### 服务器相关
 
-本站部署在狗云的香港 - KC 机房 VPS 上，配置为 2C2G50M 带宽，线路是三网优化。
+本站部署在狗云的香港-KC 机房 VPS 上，配置为 2C2G50M 带宽，线路是三网优化。
 
 域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时还没备案。
 
