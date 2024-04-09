@@ -14,34 +14,30 @@ const customComponents: {
 };
 
 export function FallbackComponent(
-	{
-		children,
-	}: Readonly<{
-		children?: React.ReactNode;
-	}>,
-	props: JSX.IntrinsicElements["div"]
+	props: JSX.IntrinsicElements["div"] &
+		Readonly<{
+			children?: React.ReactNode;
+		}>
 ) {
-	return <div {...props}>{children}</div>;
+	return <div {...props}>{props.children}</div>;
 }
 
 export default function AllenyouDiv(
-	props: JSX.IntrinsicElements["div"] & { component?: string },
-	{
-		children,
-	}: Readonly<{
+	props: JSX.IntrinsicElements["div"] & {
+		component?: string;
 		children?: React.ReactNode;
-	}> = {}
+	}
 ) {
 	if (props === undefined || !props.hasOwnProperty("component")) {
-		return <div>{children}</div>;
+		return <div>{props.children}</div>;
 	}
 	if (!customComponents.hasOwnProperty(props.component!)) {
-		return <FallbackComponent {...props}>{children}</FallbackComponent>;
+		return <FallbackComponent {...props}>{props.children}</FallbackComponent>;
 	}
 	const Target = customComponents[props.component!];
-	if (children === undefined || children === null) {
+	if (props.children === undefined || props.children === null) {
 		return <Target {...props} />;
 	} else {
-		return <Target {...props}>{children}</Target>;
+		return <Target {...props}>{props.children}</Target>;
 	}
 }
