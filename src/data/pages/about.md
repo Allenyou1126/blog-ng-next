@@ -16,22 +16,17 @@
 我平时花在游戏上的时间不算特别多，在玩的游戏有下面这些（按照最近玩的时间长短排序）：
 
 - Apex Legends
-- Phigros（rks 15.33）
-- Arcaea（ptt 9.53）
-- Counter Strike 2
-- 范式：起源 Paradigm: Reboot
+- Phigros（rks 15.40）
+- Arcaea（ptt 10.75）
 - Minecraft: Java Edition
-- Malody（Regular 0dan）
-- 旋转音律 Rotaeno（Rating 15.023）
-- Changed
-- Titanfall 2
-- PUBG: Battlegrounds
 
-突然发现我玩的游戏还蛮多的而且我真的好菜啊 QwQ
+突然发现我真的好菜啊 QwQ
 
 ## Furry？
 
-单纯小透明福瑞控一枚，兽设名同常用昵称，长啥样可以看博客头图或者我头像（
+小透明福瑞控一枚，兽设名同常用昵称，长啥样可以看博客头图或者我头像（）
+
+每年暑期可能出没于兽聚中，欢迎前来捕捉~
 
 ## 联系方式
 
@@ -58,7 +53,7 @@
 
 ### 服务器相关
 
-本站部署在狗云的香港-KC 机房 VPS 上，配置为 2C2G50M 带宽，线路是三网优化。
+本站部署在狗云的香港-KC 机房 VPS 上，配置为 2C2G25M 带宽，阿里云线路。
 
 域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时还没备案。
 
