@@ -2,11 +2,11 @@
 "use client";
 import { connectString } from "@/libs/connectString";
 import { throttle } from "@/libs/throttle";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import DarkModeSwitcher from "./DarkModeSwitcher";
 import getAvatar from "@/libs/getAvatar";
 import MobileNavSwitcher from "./MobileMenuSwitcher";
+import AllenyouLink from "./AllenyouLink";
 
 export default function Navigation() {
 	const [shouldExpand, setShouldExpand] = useState(false);
@@ -50,7 +50,7 @@ export default function Navigation() {
 					"items-center",
 					"gap-8",
 				])}>
-				<Link href="/">
+				<AllenyouLink href="/">
 					<img
 						src={`${getAvatar("allenyou1126@gmail.com")}?s=48`}
 						width={48}
@@ -58,19 +58,24 @@ export default function Navigation() {
 						alt="Avatar"
 						className="rounded-full"
 					/>
-				</Link>
+				</AllenyouLink>
 				<ul className="hidden md:flex justify-center gap-8">
 					<li>
-						<Link href="/">首页</Link>
+						<AllenyouLink href="/">首页</AllenyouLink>
 					</li>
 					<li>
-						<Link href="/friend/">友链</Link>
+						<AllenyouLink href="/friend/">友链</AllenyouLink>
 					</li>
 					<li>
-						<Link href="/board/">留言</Link>
+						<AllenyouLink href="/board/">留言</AllenyouLink>
 					</li>
 					<li>
-						<Link href="/about/">关于</Link>
+						<AllenyouLink href="/about/">关于</AllenyouLink>
+					</li>
+					<li>
+						<AllenyouLink href="https://www.travellings.cn/go.html">
+							开往
+						</AllenyouLink>
 					</li>
 				</ul>
 				<MobileNavSwitcher />

@@ -1,10 +1,10 @@
 "use client";
-import Link from "next/link";
 import { mobileMenuVis } from "./MobileMenuSwitcher";
 import { useAtom } from "jotai/react";
 import { connectString } from "@/libs/connectString";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCross, faXmark } from "@fortawesome/free-solid-svg-icons";
+import AllenyouLink from "./AllenyouLink";
 
 export default function MobileMenu() {
 	const [vis, setVis] = useAtom(mobileMenuVis);
@@ -34,24 +34,31 @@ export default function MobileMenu() {
 			</button>
 			<ul className="text-3xl text-primary mt-40 flex flex-col gap-12">
 				<li>
-					<Link className="hover:opacity-80" href="/">
+					<AllenyouLink className="hover:opacity-80" href="/">
 						首页
-					</Link>
+					</AllenyouLink>
 				</li>
 				<li>
-					<Link className="hover:opacity-80" href="/friend/">
+					<AllenyouLink className="hover:opacity-80" href="/friend/">
 						友链
-					</Link>
+					</AllenyouLink>
 				</li>
 				<li>
-					<Link className="hover:opacity-80" href="/board/">
+					<AllenyouLink className="hover:opacity-80" href="/board/">
 						留言
-					</Link>
+					</AllenyouLink>
 				</li>
 				<li>
-					<Link className="hover:opacity-80" href="/about/">
+					<AllenyouLink className="hover:opacity-80" href="/about/">
 						关于
-					</Link>
+					</AllenyouLink>
+				</li>
+				<li>
+					<AllenyouLink
+						className="hover:opacity-80"
+						href="https://www.travellings.cn/go.html">
+						开往
+					</AllenyouLink>
 				</li>
 			</ul>
 			<p className="text-xl align-baseline absolute bottom-4 left-4">
