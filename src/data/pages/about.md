@@ -1,24 +1,26 @@
-你好，这里是秋实-Allenyou （a.k.a. Allenyou、秋实、Allen You），业余 Bug Producer，Furry 控，前 OIer，现 ACMer（蒟蒻），这是一些关于我和本站的信息。
+你好，这里是秋实-Allenyou （a.k.a. Allenyou、秋实、Allen You），业余 Bug 制造者，Furry 控，前 OIer，现 ACMer（蒟蒻），这是一些关于我和本站的信息。
 
-## 技术
+## 技术栈
 
 - C++：主要用于算法竞赛，会基本语法、STL、简单面向对象和一些指针/模板/宏的黑魔法
 - Java/Kotlin：主要用于开发 Minecraft Bukkit 服务器插件
-- Python：俗称胶水，用来偷懒/做一些科学计算
+- Python：俗称胶水，用来写偷懒脚本/做一些科学计算
 - JavaScript/TypeScript：前端开发
   - React + Next.js：本博客技术栈
   - Vue：尝试过，但是最近没在用
+- Golang：正在学习，尝试将其用于容器化后端的构建
 - Tailwind CSS：用来解决我不会写 CSS 的问题（bushi）
-- Linux + Docker：非常适合偷懒的服务器运维方法（）
+- Linux & Docker：非常适合偷懒的服务器运维
 
 ## VAN♂ 游戏
 
 我平时花在游戏上的时间不算特别多，在玩的游戏有下面这些（按照最近玩的时间长短排序）：
 
 - Apex Legends
-- Phigros（rks 15.40）
+- Phigros（rks 15.46）
 - Arcaea（ptt 10.75）
 - Minecraft: Java Edition
+- League of Legends
 
 突然发现我真的好菜啊 QwQ
 
@@ -30,7 +32,7 @@
 
 ## 联系方式
 
-你可以通过以下方法联系我（其他的请联系我私下获取，但最好不要公开）：
+你可以通过以下方法联系我（如果希望扩列请联系我私下获取 QQ 等联系方式，但最好不要公开）：
 
 - Bilibili：@秋实-Allenyou
 - 邮箱：
@@ -55,7 +57,7 @@
 
 本站部署在狗云的香港-KC 机房 VPS 上，配置为 2C2G25M 带宽，阿里云线路。
 
-域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时还没备案。
+域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时不打算备案。
 
 DNS 使用 Cloudflare 的免费服务进行解析，没开启 CDN（CF 的国外节点在国内用简直就是减速好吗 kora！）
 
