@@ -52,7 +52,7 @@ export default function Navigation() {
 				])}>
 				<AllenyouLink href="/">
 					<img
-						src={`${getAvatar("allenyou1126@gmail.com")}?s=48`}
+						src={`${getAvatar("allenyou1126@gmail.com")}?s=80`}
 						width={48}
 						height={48}
 						alt="Avatar"
