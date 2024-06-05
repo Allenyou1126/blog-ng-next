@@ -1,5 +1,5 @@
 ---
-id: 17
+id: 18
 title: "【教程】使用阿里云 OSS + CDN 加速 Gravatar"
 created_at: "2024-06-05"
 modified_at: "2024-06-05"
