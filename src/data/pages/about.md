@@ -19,6 +19,7 @@
 - Apex Legends
 - Phigros（rks 15.46）
 - Arcaea（ptt 10.75）
+- 旋转音律 Rotaeno（音律值 15.336）
 - Minecraft: Java Edition
 - League of Legends
 
@@ -53,11 +54,11 @@
 
 本站前端样式模仿自[tcdw](https://www.tcdw.net)，感谢大佬授权！
 
-### 服务器相关
+### 使用的服务设施
 
-本站部署在狗云的香港-KC 机房 VPS 上，配置为 2C2G25M 带宽，阿里云线路。
+本站部署在狗云的香港-KC 机房 VPS 上，配置为 2 核，2G 内存，25M 带宽，阿里云线路。
 
-域名是在腾讯云买的`.wang`域名，价格是一年 40，暂时不打算备案。
+域名是在腾讯云买的 `.wang` 域名，价格是一年 40，短期内无备案计划。
 
 DNS 使用 Cloudflare 的免费服务进行解析，没开启 CDN（CF 的国外节点在国内用简直就是减速好吗 kora！）
 
@@ -65,4 +66,4 @@ DNS 使用 Cloudflare 的免费服务进行解析，没开启 CDN（CF 的国外
 
 ### 网站架构
 
-使用 Next.js + React + TailwindCSS 开发。
+使用 Next.js + React + TailwindCSS 开发并静态构建，运行于 Linux + Nginx in Docker 架构上。
