@@ -23,3 +23,27 @@
 - 个人签名 or 简介（可选）：稻花香里说丰年，听取 WA 声一片
 
 **由于本博客开源于 [Allenyou1126/blog-ng-next](https://github.com/Allenyou1126/blog-ng-next)，您也可以通过自行到仓库中修改 `src/data/links.ts` 并提交 Pull Request 的方式申请友链~**
+
+```json
+// 失效友链列表
+[
+	{
+		// 失效原因：网站域名过期，且无法联系到站长
+		"title": "无名博客",
+		"url": "https://wuminboke.site/",
+		"description": "一个无聊的人罢了~"
+	},
+	{
+		// 失效原因：网站暂时无法访问，待恢复后将重新添加
+		"title": "中二病晚期の物語",
+		"url": "https://imfurry.com/",
+		"description": "一只狐狸敲出的一个奇迹"
+	},
+	{
+		// 失效原因：博主对博客进行备案，暂时移除友链，待备案完成后恢复
+		"title": "布丁の小窝",
+		"url": "https://furryowo.top/",
+		"description": "一个有梦想的咸鱼"
+	}
+]
+```

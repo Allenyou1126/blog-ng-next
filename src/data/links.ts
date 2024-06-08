@@ -8,13 +8,13 @@ export const links: LinkType[] = [
 			"https://blog-oss.allenyou.top/avatar/2764b0d411f9847464a866cb5500beed",
 		description: "写点无聊事",
 	},
-	{
-		title: "中二病晚期の物語",
-		url: "https://imfurry.com/",
-		image:
-			"https://blog-oss.allenyou.top/avatar/f28c0de50214c44f67d38e688495d6b7",
-		description: "一只狐狸敲出的一个奇迹",
-	},
+	// {
+	// 	title: "中二病晚期の物語",
+	// 	url: "https://imfurry.com/",
+	// 	image:
+	// 		"https://blog-oss.allenyou.top/avatar/f28c0de50214c44f67d38e688495d6b7",
+	// 	description: "一只狐狸敲出的一个奇迹",
+	// },
 	{
 		title: "冰轩",
 		url: "https://www.bingxuan.org/",
@@ -33,13 +33,13 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/64b399785795e.png",
 		description: "My Blog!",
 	},
-	{
-		title: "布丁の小窝",
-		url: "https://furryowo.top/",
-		image:
-			"https://blog-oss.allenyou.top/avatar/7da7e82f04de94c795db0301c3397bb6",
-		description: "一个有梦想的咸鱼",
-	},
+	// {
+	// 	title: "布丁の小窝",
+	// 	url: "https://furryowo.top/",
+	// 	image:
+	// 		"https://blog-oss.allenyou.top/avatar/7da7e82f04de94c795db0301c3397bb6",
+	// 	description: "一个有梦想的咸鱼",
+	// },
 	{
 		title: "挖站否",
 		url: "https://wzfou.com/",
@@ -53,12 +53,12 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/65594fd0af4ad.jpg",
 		description: "我寄愁心与明月，随君直到夜郎西",
 	},
-	{
-		title: "无名博客",
-		url: "https://wuminboke.site/",
-		image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
-		description: "一个无聊的人罢了~",
-	},
+	// {
+	// 	title: "无名博客",
+	// 	url: "https://wuminboke.site/",
+	// 	image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
+	// 	description: "一个无聊的人罢了~",
+	// },
 	{
 		title: "吐槽大王部落格",
 		url: "https://www.tcdw.net/",
