@@ -29,7 +29,7 @@ export default function GoToTop() {
 		<button
 			title="Go to Top"
 			className={connectString([
-				"block z-50 fixed bottom-4 right-4 rounded-2xl hover:opacity-80 border-2 border-opacity-60 bg-white dark:bg-gray-950 dark:text-gray-300/80 transition-opacity duration-200 items-center text-center p-4 shadow-3xl",
+				"block z-50 fixed bottom-4 right-4 rounded-2xl hover:opacity-80 border-2 border-opacity-60 bg-white dark:bg-gray-950 dark:text-gray-300/80 transition-all duration-200 items-center text-center p-4 shadow-3xl",
 				vis ? "opacity-100" : "opacity-0 invisible",
 			])}
 			onClick={() => {

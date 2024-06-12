@@ -1,4 +1,3 @@
-import Link from "next/link";
 import AllenyouLink from "./AllenyouLink";
 
 export default function Footer() {

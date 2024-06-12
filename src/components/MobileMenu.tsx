@@ -3,7 +3,7 @@ import { mobileMenuVis } from "./MobileMenuSwitcher";
 import { useAtom } from "jotai/react";
 import { connectString } from "@/libs/connectString";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCross, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import AllenyouLink from "./AllenyouLink";
 
 export default function MobileMenu() {
