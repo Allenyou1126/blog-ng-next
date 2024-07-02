@@ -13,10 +13,10 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	<DarkModeClient />;
 	return (
 		<html lang="zh-Hans" className={"font-crf scroll-smooth"}>
 			<body className="dark:bg-gray-950 dark:text-gray-300/80">
+				<DarkModeClient />
 				<Navigation />
 				<Header />
 				<div className="flex justify-center -mt-32 z-10 relative w-full gap-4">
