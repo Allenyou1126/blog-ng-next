@@ -8,13 +8,13 @@ export const links: LinkType[] = [
 			"https://blog-oss.allenyou.top/avatar/2764b0d411f9847464a866cb5500beed",
 		description: "写点无聊事",
 	},
-	// {
-	// 	title: "中二病晚期の物語",
-	// 	url: "https://imfurry.com/",
-	// 	image:
-	// 		"https://blog-oss.allenyou.top/avatar/f28c0de50214c44f67d38e688495d6b7",
-	// 	description: "一只狐狸敲出的一个奇迹",
-	// },
+	{
+		title: "中二病晚期の物語",
+		url: "https://imfurry.com/",
+		image:
+			"https://blog-oss.allenyou.top/avatar/f28c0de50214c44f67d38e688495d6b7",
+		description: "一只狐狸敲出的一个奇迹",
+	},
 	{
 		title: "冰轩",
 		url: "https://www.bingxuan.org/",
