@@ -1,7 +1,6 @@
-import { cache } from "react";
 import { LinkType, PostType } from "./types";
 import { links as ln } from "@/data/links";
-import { readFile, readFileSync, readdir, readdirSync } from "fs";
+import { readFileSync, readdirSync } from "fs";
 import path from "path";
 import fm from "front-matter";
 import getOrDefault from "./getOrDefault";
