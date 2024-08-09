@@ -53,12 +53,12 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/65594fd0af4ad.jpg",
 		description: "我寄愁心与明月，随君直到夜郎西",
 	},
-	// {
-	// 	title: "无名博客",
-	// 	url: "https://wuminboke.site/",
-	// 	image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
-	// 	description: "一个无聊的人罢了~",
-	// },
+	{
+	 	title: "无名博客",
+	 	url: "https://wuminboke.site/",
+	 	image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
+	 	description: "一个无聊的人罢了~",
+	 },
 	{
 		title: "吐槽大王部落格",
 		url: "https://www.tcdw.net/",
