@@ -9,6 +9,11 @@ export default function Footer() {
 				<AllenyouLink href="https://nextjs.org">Next.JS</AllenyouLink> &{" "}
 				<AllenyouLink href="https://tailwindcss.com">TailwindCSS</AllenyouLink>
 			</p>
+			<p className="opacity-70">
+				本站已加入{" "}
+				<AllenyouLink href="https://www.foreverblog.cn/">十年之约</AllenyouLink>{" "}
+				& <AllenyouLink href="https://travellings.cn">开往</AllenyouLink>
+			</p>
 			<div className="opacity-70 flex flex-row flex-nowrap gap-8">
 				<AllenyouLink className="block" href="/feed/">
 					RSS Feed
