@@ -33,13 +33,13 @@ export const links: LinkType[] = [
 		image: "https://blog-oss.allenyou.top/image/64b399785795e.png",
 		description: "My Blog!",
 	},
-	// {
-	// 	title: "布丁の小窝",
-	// 	url: "https://furryowo.top/",
-	// 	image:
-	// 		"https://blog-oss.allenyou.top/avatar/7da7e82f04de94c795db0301c3397bb6",
-	// 	description: "一个有梦想的咸鱼",
-	// },
+	{
+		title: "布丁の小窝",
+		url: "https://www.furryowo.top/",
+		image:
+			"https://blog-oss.allenyou.top/avatar/7da7e82f04de94c795db0301c3397bb6",
+		description: "一个有梦想的咸鱼",
+	},
 	{
 		title: "挖站否",
 		url: "https://wzfou.com/",
@@ -54,11 +54,11 @@ export const links: LinkType[] = [
 		description: "我寄愁心与明月，随君直到夜郎西",
 	},
 	{
-	 	title: "无名博客",
-	 	url: "https://wuminboke.site/",
-	 	image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
-	 	description: "一个无聊的人罢了~",
-	 },
+		title: "无名博客",
+		url: "https://wuminboke.site/",
+		image: "https://blog-oss.allenyou.top/image/65c636851bfd6.webp",
+		description: "一个无聊的人罢了~",
+	},
 	{
 		title: "吐槽大王部落格",
 		url: "https://www.tcdw.net/",
