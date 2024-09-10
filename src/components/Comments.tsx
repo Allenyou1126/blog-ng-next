@@ -2,12 +2,21 @@
 import dynamic from "next/dynamic";
 import { Loading } from "./Loading";
 
-export const Comments = dynamic(() => import("@/components/WalineComments"), {
-	ssr: false,
-	loading: () => {
-		return <CommentsLoading />;
-	},
-});
+// export const Comments = dynamic(() => import("@/components/WalineComments"), {
+// 	ssr: false,
+// 	loading: () => {
+// 		return <CommentsLoading />;
+// 	},
+// });
+export const Comments = dynamic(
+	() => import("@/components/NewWalineComments"),
+	{
+		ssr: false,
+		loading: () => {
+			return <CommentsLoading />;
+		},
+	}
+);
 
 export function CommentsLoading() {
 	return (
