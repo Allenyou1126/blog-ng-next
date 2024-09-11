@@ -1,6 +1,7 @@
 import AllenyouLink from "./AllenyouLink";
 import LazyloadImage from "./LazyloadImage";
 import BilibiliVideo from "./MarkdownExtend/BilibiliVideo";
+import NeteaseMusic from "./MarkdownExtend/NeteaseMusic";
 
 const customComponents: {
 	[prop: string]: // | JSX.Element
@@ -11,6 +12,7 @@ const customComponents: {
 	Link: AllenyouLink,
 	Image: LazyloadImage,
 	Bilibili: BilibiliVideo,
+	NeteaseMusic: NeteaseMusic,
 };
 
 export function FallbackComponent(
