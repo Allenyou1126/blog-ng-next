@@ -21,7 +21,7 @@ export const Comments = dynamic(
 export function CommentsLoading() {
 	return (
 		<>
-			<div className="w-full flex justify-center items-center flex-col gap-4">
+			<div className="w-full flex justify-center items-center flex-col gap-4 mt-4">
 				<Loading />
 				<p className="font-bold text-xl">加载评论中……</p>
 			</div>

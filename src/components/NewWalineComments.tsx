@@ -75,14 +75,14 @@ export function NewWalineCommentsDataProvider({
 }
 
 export default function NewWalineComments() {
-	const [, forceUpdate] = useReducer((x) => x, 0);
+	const [updateHooker, forceUpdate] = useReducer((x) => x + 1, 0);
 	return (
 		<NewWalineCommentsDataProvider>
 			<div id="comment" className="text-start w-full">
 				<NewWalineCommentArea forceUpdate={forceUpdate} />
 				<div id="comment-content">
 					<Suspense fallback={<CommentsLoading />}>
-						<NewWalineCommentCards />
+						<NewWalineCommentCards updateHooker={updateHooker} />
 					</Suspense>
 				</div>
 			</div>
@@ -353,7 +353,7 @@ export function NewWalineCommentCard({
 	);
 }
 
-export function NewWalineCommentCards() {
+export function NewWalineCommentCards(props: { updateHooker: number }) {
 	const [page, setPage] = useState(1);
 	const pathname = usePathname();
 	const comment_promise = getComment({
@@ -376,6 +376,7 @@ export function NewWalineCommentCards() {
 			</>
 		);
 	}
+	const total = ret.totalPages;
 	return (
 		<>
 			{ret.count === 0 ? (
@@ -387,6 +388,33 @@ export function NewWalineCommentCards() {
 				{ret.data.map((c) => {
 					return <NewWalineCommentCard key={c.objectId} c={c} />;
 				})}
+			</div>
+			<div
+				className={connectString([
+					total <= 1 ? "hidden" : "",
+					" relative h-12 mt-8",
+				])}>
+				<p className="absolute top-2/4 -translate-y-2/4 left-0 right-0 m-auto text-center text-base">{`第${page}页，共${total}页`}</p>
+				<button
+					className={connectString([
+						page <= 1 ? "hidden" : "",
+						"absolute left-0 px-4 py-2 rounded-3xl bg-primary text-base top-2/4 -translate-y-2/4 font-bold text-white hover:opacity-90",
+					])}
+					onClick={() => {
+						setPage(page - 1);
+					}}>
+					上一页
+				</button>
+				<button
+					className={connectString([
+						page >= total ? "hidden" : "",
+						"absolute right-0 px-4 py-2 rounded-3xl bg-primary text-base top-2/4 -translate-y-2/4 font-bold text-white hover:opacity-90",
+					])}
+					onClick={() => {
+						setPage(page + 1);
+					}}>
+					下一页
+				</button>
 			</div>
 		</>
 	);
