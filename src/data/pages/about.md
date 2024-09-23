@@ -16,14 +16,15 @@
 
 我平时花在游戏上的时间不算特别多，在玩的游戏有下面这些（按照最近玩的时间长短排序）：
 
-- Apex Legends
+- Counter Strike 2 (5e 优先 1400)
 - Phigros（rks 15.54）
-- Arcaea（ptt 10.75）
-- 旋转音律 Rotaeno（音律值 15.336）
-- Minecraft: Java Edition
-- League of Legends
-- Counter Strike 2
+- Maimai DX 2024
 - PUBG: BATTLEGROUNDS
+- 旋转音律 Rotaeno（音律值 15.336）
+- Arcaea（ptt 10.75）
+- Minecraft: Java Edition
+- Apex Legends
+- League of Legends
 
 突然发现我真的好菜啊 QwQ
 
