@@ -7,6 +7,7 @@ import GoToTop from "@/components/GoToTop";
 import MobileMenu from "@/components/MobileMenu";
 import { Matomo } from "@/components/Matomo";
 import { DarkModeClient } from "@/components/DarkModeClient";
+import AntiReverseProxy from "@/components/AntiReverseProxy";
 
 export default function RootLayout({
 	children,
@@ -26,6 +27,7 @@ export default function RootLayout({
 				<GoToTop />
 				<MobileMenu />
 				<Matomo />
+				<AntiReverseProxy />
 			</body>
 		</html>
 	);
