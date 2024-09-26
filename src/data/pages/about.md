@@ -12,13 +12,22 @@
 - Tailwind CSS：用来解决我不会写 CSS 的问题（bushi）
 - Linux & Docker：非常适合偷懒的服务器运维
 
+## 常用设备
+
+- 💻：Lenovo REGION R9000P 2023
+- 📱：Redmi K60
+- 📱：Xiaomi Pad 6 Pro
+- ⌚：Xiaomi Smart Band 8 NFC
+- 🎧：Redmi Buds 5 Pro
+- ⌨：GNASS GS104C
+
 ## VAN♂ 游戏
 
 我平时花在游戏上的时间不算特别多，在玩的游戏有下面这些（按照最近玩的时间长短排序）：
 
 - Counter Strike 2 (5e 优先 1400)
 - Phigros（rks 15.54）
-- Maimai DX 2024
+- Maimai DX 2024（DX Rating 9554）
 - PUBG: BATTLEGROUNDS
 - 旋转音律 Rotaeno（音律值 15.336）
 - Arcaea（ptt 10.75）
