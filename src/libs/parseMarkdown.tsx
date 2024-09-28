@@ -1,7 +1,7 @@
 import MarkdownIt, { Token } from "markdown-it";
 import HighlightJS from "highlight.js";
 import { ReactNode } from "react";
-import slugify from "@sindresorhus/slugify";
+// import slugify from "@sindresorhus/slugify";
 import mdit_anchor from "markdown-it-anchor";
 import mdit_mathjax from "markdown-it-mathjax3";
 import htmr from "htmr";
@@ -24,6 +24,12 @@ export const hljs = (str: string, lang: string): string => {
 	return "";
 };
 
+var index = 0;
+
+const slugify = (s: string) => {
+	return `${++index}`;
+};
+
 const slg = (s: string) => {
 	return `content-${slugify(s)}`;
 };
@@ -39,11 +45,14 @@ export const mdit = MarkdownIt({
 	});
 
 function parseMarkdownToHtml(markdown: string): string {
+	index = 0;
 	return mdit.render(markdown);
 }
 
 export function parseToc(markdown: string): TocType[] {
+	index = 0;
 	const ast = mdit.parse(markdown, {});
+	index = 0;
 	var flag = false;
 	var title = "";
 	var toc_array: { level: number; title: string; id: string }[] = [];
@@ -108,6 +117,7 @@ export function parseToc(markdown: string): TocType[] {
 export default function parseMarkdown(
 	markdown: string
 ): ReactNode[] | ReactNode {
+	index = 0;
 	const html = parseMarkdownToHtml(markdown);
 	return htmr(html, {
 		transform: {
