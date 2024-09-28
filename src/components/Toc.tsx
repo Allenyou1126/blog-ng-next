@@ -1,6 +1,7 @@
+"use client";
+
 import { TocType } from "@/libs/types";
 import { ReactNode } from "react";
-import AllenyouLink from "./AllenyouLink";
 
 function rendToc(toc: TocType[]): ReactNode {
 	if (toc.length === 0) {
@@ -12,18 +13,34 @@ function rendToc(toc: TocType[]): ReactNode {
 		if (item.child.length === 0) {
 			ret.push(
 				<li key={++index}>
-					<AllenyouLink className="hover:opacity-80" href={`#${item.id}`}>
+					<button
+						className="hover:opacity-80"
+						onClick={() => {
+							setTimeout(() => {
+								document
+									.getElementById(item.id)!
+									.scrollIntoView({ block: "center" });
+							}, 10);
+						}}>
 						{item.display}
-					</AllenyouLink>
+					</button>
 				</li>
 			);
 			return;
 		}
 		ret.push(
 			<li key={++index}>
-				<AllenyouLink className="hover:opacity-80" href={`#${item.id}`}>
+				<button
+					className="hover:opacity-80"
+					onClick={() => {
+						setTimeout(() => {
+							document
+								.getElementById(item.id)!
+								.scrollIntoView({ block: "center" });
+						}, 10);
+					}}>
 					{item.display}
-				</AllenyouLink>
+				</button>
 				{rendToc(item.child)}
 			</li>
 		);

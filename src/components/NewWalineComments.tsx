@@ -218,7 +218,18 @@ export function NewWalineCommentArea({
 			/>
 			<div className="mx-3 my-2 flex overflow-hidden w-full items-center justify-between">
 				<div className="flex items-center gap-4">
-					{pid !== "" && <p className="opacity-60 text-xs">正在回复 #{pid}</p>}
+					{pid !== "" && (
+						<p
+							className="opacity-60 text-xs cursor-pointer"
+							title="点击取消回复"
+							onClick={() => {
+								setPid("");
+								setRid("");
+								setAt("");
+							}}>
+							正在回复 #{pid}
+						</p>
+					)}
 				</div>
 				<div className="flex items-center gap-4">
 					<p className="opacity-60 text-xs">{content.length.toString()} 字</p>
@@ -249,6 +260,7 @@ export function UpdateButton({
 	const setRid = useContext(setRidContext);
 	const setAt = useContext(setAtContext);
 	const router = useRouter();
+	const pathname = usePathname();
 	return (
 		<button
 			className={connectString([
@@ -261,7 +273,12 @@ export function UpdateButton({
 					setPid(c.objectId);
 					setRid(parent === undefined ? c.objectId : parent);
 					setAt(c.nick);
-					router.push("#comment-area");
+					setTimeout(() => {
+						document.getElementById("comment-area")!.scrollIntoView({
+							block: "center",
+							behavior: "smooth",
+						});
+					}, 10);
 					return;
 				}
 				setPid("");
