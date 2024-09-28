@@ -291,7 +291,8 @@ export function NewWalineCommentCard({
 			</div>
 			<div className="flex flex-1 pb-2 flex-col gap-1">
 				<div className="overflow-hidden relative w-full lh-1.75">
-					{c.link.startsWith("http://") || c.link.startsWith("https://") ? (
+					{c.link !== null &&
+					(c.link.startsWith("http://") || c.link.startsWith("https://")) ? (
 						<a
 							href={c.link}
 							className="inline-block text-sm font-bold text-primary">
