@@ -15,7 +15,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="zh-Hans" className={"font-crf scroll-smooth"}>
+		<html lang="zh-Hans" className="font-crf scroll-smooth">
 			<body className="dark:bg-gray-950 dark:text-gray-300/80">
 				<DarkModeClient />
 				<Navigation />
