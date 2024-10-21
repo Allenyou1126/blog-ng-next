@@ -13,9 +13,10 @@ export async function GET() {
 		generator: "blog-ng-next by Allenyou (Based on Next.js & Tailwind CSS)",
 		custom_elements: [
 			{
-				follow_challenge: {
-					_attr: { feed_id: "68921984956825606", user_id: "69221670505945088" },
-				},
+				follow_challenge: [
+					{ feed_id: "68921984956825606" },
+					{ user_id: "69221670505945088" },
+				],
 			},
 		],
 	});
