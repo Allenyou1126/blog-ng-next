@@ -9,15 +9,22 @@ export async function GET() {
 		site_url: `https://${config.blog.hostname}/`,
 		feed_url: `https://${config.blog.hostname}/feed/`,
 		language: "zh-CN",
-		image_url: "",
+		image_url: `https://${config.blog.hostname}/favicon.ico`,
 		generator: "blog-ng-next by Allenyou (Based on Next.js & Tailwind CSS)",
+		custom_elements: [
+			{
+				follow_challenge: {
+					_attr: { feed_id: "68921984956825606", user_id: "69221670505945088" },
+				},
+			},
+		],
 	});
-	const cms = initCMS();
+	const cms = await initCMS();
 	cms.postIds.forEach((id) => {
 		const post = cms.getPost(id)!;
 		feed.item({
 			title: post.title,
-			description: post.description,
+			description: post.htmlContent,
 			url: `https://${config.blog.hostname}/post/${id}`,
 			date: post.created_at,
 		});

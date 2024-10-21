@@ -16,7 +16,7 @@ export async function GET() {
 	// 	image_url: "",
 	// 	generator: "blog-ng-next by Allenyou (Based on Next.js & Tailwind CSS)",
 	// });
-	const cms = initCMS();
+	const cms = await initCMS();
 	var links = cms.postIds
 		.map((id) => {
 			const post = cms.getPost(id)!;

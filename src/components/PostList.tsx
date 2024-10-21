@@ -4,7 +4,7 @@ import PageSwitcher from "./PageSwitcher";
 import { initCMS } from "@/libs/contents";
 
 export default async function PostList({ page }: { page: number }) {
-	const cms = initCMS();
+	const cms = await initCMS();
 	const posts: PostType[] = cms.getPosts(page);
 	const postList = posts.map((post, index) => {
 		return (

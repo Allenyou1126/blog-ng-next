@@ -127,3 +127,33 @@ export default function parseMarkdown(
 		},
 	});
 }
+
+const getData = async (component: React.ReactNode) => {
+	const ReactDOMServer = (await import("react-dom/server")).default;
+	const staticMarkup = ReactDOMServer.renderToStaticMarkup(component);
+	return staticMarkup;
+};
+
+export function RssDisableCustomElement(
+	props: JSX.IntrinsicElements["div"] & {
+		component?: string;
+		children?: React.ReactNode;
+	}
+) {
+	if (props === undefined || !props.hasOwnProperty("component")) {
+		return <div {...props}>{props.children}</div>;
+	}
+	return <p>该组件无法在 RSS 中显示，请打开源站查看。</p>;
+}
+
+export async function parseToRssHtml(markdown: string) {
+	index = 0;
+	const html = parseMarkdownToHtml(markdown);
+	return await getData(
+		htmr(html, {
+			transform: {
+				div: RssDisableCustomElement,
+			},
+		})
+	);
+}

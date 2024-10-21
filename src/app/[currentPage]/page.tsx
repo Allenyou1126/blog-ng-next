@@ -5,7 +5,7 @@ import { initCMS } from "@/libs/contents";
 export var metadata = generateMetadata(`文章列表 - 第1页`);
 
 export async function generateStaticParams() {
-	const cms = initCMS();
+	const cms = await initCMS();
 	const total: number = Math.ceil(cms.postIds.length / 10);
 	var ret = [];
 	for (var i: number = 1; i <= total; ++i) {

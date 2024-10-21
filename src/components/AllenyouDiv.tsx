@@ -31,7 +31,7 @@ export default function AllenyouDiv(
 	}
 ) {
 	if (props === undefined || !props.hasOwnProperty("component")) {
-		return <div>{props.children}</div>;
+		return <div {...props}>{props.children}</div>;
 	}
 	if (!customComponents.hasOwnProperty(props.component!)) {
 		return <FallbackComponent {...props}>{props.children}</FallbackComponent>;

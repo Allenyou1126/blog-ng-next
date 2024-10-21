@@ -20,7 +20,7 @@ export default async function LinkPage() {
 	};
 	const content = await getContent();
 	const postContent = parseMarkdown(content);
-	const cms = initCMS();
+	const cms = await initCMS();
 	var index = 0;
 	const linkList = cms.links.map((link: LinkType) => {
 		if (link.image == undefined) {

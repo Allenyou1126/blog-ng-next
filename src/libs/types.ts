@@ -1,7 +1,12 @@
+import React from "react";
+
 export type PostType = {
 	id: number;
 	title: string;
-	content: string;
+	originalContent: string;
+	reactNodeContent: React.ReactNode;
+	tocContent: TocType[];
+	htmlContent: string;
 	description: string;
 	created_at: Date;
 	modified_at: Date;
