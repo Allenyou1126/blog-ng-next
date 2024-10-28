@@ -14,8 +14,8 @@ export async function GET() {
 		custom_elements: [
 			{
 				follow_challenge: [
-					{ feed_id: "68921984956825606" },
-					{ user_id: "69221670505945088" },
+					{ feedId: "68921984956825606" },
+					{ userId: "69221670505945088" },
 				],
 			},
 		],

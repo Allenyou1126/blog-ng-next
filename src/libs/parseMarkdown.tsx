@@ -43,6 +43,10 @@ export const mdit = MarkdownIt({
 	.use(mdit_anchor, {
 		slugify: slg,
 	});
+export const mdit_rss = MarkdownIt({
+	highlight: hljs,
+	html: true,
+}).enable("table");
 
 function parseMarkdownToHtml(markdown: string): string {
 	index = 0;
@@ -148,7 +152,8 @@ export function RssDisableCustomElement(
 
 export async function parseToRssHtml(markdown: string) {
 	index = 0;
-	const html = parseMarkdownToHtml(markdown);
+	const html = mdit_rss.render(markdown);
+	// const html = parseMarkdownToHtml(markdown);
 	return await getData(
 		htmr(html, {
 			transform: {
